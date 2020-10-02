@@ -16,7 +16,7 @@ class MoveWithObject : AppCompatActivity() {
         setContentView(R.layout.activity_move_with_object)
 
         val person = intent.getParcelableExtra<Person>(EXTRA_PERSON)
-        val text = "Name: ${person?.name.toString()}, \nEmail: ${person?.email}, \nAge: ${person?.age},\nLocation: ${person?.city}"
+        val text = "Name: ${person?.name}, \nEmail: ${person?.email}, \nAge: ${person?.age},\nLocation: ${person?.city}"
         tvObject.text = text
 
     }
