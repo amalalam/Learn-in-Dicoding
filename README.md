@@ -1,3 +1,3 @@
 # Learn-in-Dicoding
 
-Latihan Activity Membawa data dengan Object data class
+Membuat Intent dengan memangil intent dari Action_dial, untuk memangil Phone
