@@ -1,11 +1,15 @@
 package com.light.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -13,16 +17,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val btnMoveWithData by lazy { findViewById<Button>(R.id.move_activity_data) }
     private val btnMoveWithObject by lazy { findViewById<Button>(R.id.move_activity_object) }
     private val btnDialNumber by lazy { findViewById<Button>(R.id.dial_number) }
+    private val btnMoveForResult by lazy{ findViewById<Button>(R.id.move_for_result)}
+    private lateinit var tvResult: TextView
+
+    companion object{
+        private const val TAG = "MyActivity"
+        private const val REQUEST_CODE = 100
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
+
         btnMoveWithObject.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
         btnMoveWithData.setOnClickListener(this)
         btnDialNumber.setOnClickListener(this)
+        btnMoveForResult.setOnClickListener(this)
+
+        tvResult = findViewById(R.id.tv_result)
+
     }
 
     override fun onClick(v: View?) {
@@ -53,6 +69,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
             }
+            R.id.move_for_result -> {
+                val moveForResult = Intent(this@MainActivity, MoveForResult::class.java)
+                Log.d(TAG, "Activity Move for Result Dijalankan")
+                startActivity(moveForResult)
+            }
         }
     }
+
+    @SuppressLint("SetTextI18n")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+//        we have some error in onActivity Result
+
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.d(TAG, "On Activity Result Dijalankan ")
+
+        if(requestCode == REQUEST_CODE){
+            if(resultCode == MoveForResult.RESULT_CODE){
+                val selectedValue = data?.getIntExtra(MoveForResult.EXTRA_SELECTED_VALUE, 0)
+                Log.d(TAG, "Hasil: $selectedValue")
+                tv_result.text = "Hasil: $selectedValue"
+            }
+        }
+
+    }
 }
+
+
