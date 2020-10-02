@@ -1,6 +1,7 @@
 package com.light.myapplication
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val btnMoveActivity: Button by lazy { findViewById<Button>(R.id.move_activity) }
     private val btnMoveWithData by lazy { findViewById<Button>(R.id.move_activity_data) }
     private val btnMoveWithObject by lazy { findViewById<Button>(R.id.move_activity_object) }
+    private val btnDialNumber by lazy { findViewById<Button>(R.id.dial_number) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoveWithObject.setOnClickListener(this)
         btnMoveActivity.setOnClickListener(this)
         btnMoveWithData.setOnClickListener(this)
+        btnDialNumber.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -44,6 +47,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveIntent = Intent(this@MainActivity, MoveWithObject::class.java)
                 moveIntent.putExtra(MoveWithObject.EXTRA_PERSON, person)
                 startActivity(moveIntent)
+            }
+            R.id.dial_number -> {
+                val phoneNumber = "+6282117843757"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
             }
         }
     }

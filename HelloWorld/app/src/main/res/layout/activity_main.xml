@@ -47,26 +47,15 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/dial_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:background="#636060"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:background="#636060"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
+        android:text="Dial a Number"
+        android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold" />
 
