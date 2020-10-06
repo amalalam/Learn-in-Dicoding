@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Indonesian Food</string>
+    <string name="foods_name">Foods Name</string>
+    <string name="detail">Detail</string>
+
+    <string-array name="data_name">
+        <item>Ayam Betutu</item>
+        <item>Ayam Taliwang</item>
+        <item>Bika Ambon</item>
+        <item>Kerak Telor</item>
+        <item>Lumpia</item>
+        <item>Mie Aceh</item>
+        <item>Nasi Gudeg</item>
+        <item>Otak-Otak</item>
+        <item>Pempek</item>
+        <item>Rendang</item>
+        <item>Sate Bandeng</item>
+        <item>Serabi</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Betutu adalah lauk yang terbuat dari ayam atau bebek yang utuh yang berisi bumbu, kemudian dipanggang dalam api sekam. Betutu ini telah dikenal di seluruh kabupaten di Bali. Betutu merupakan jenis makanan tradisional daerah Bali yang bahan mentahnya berupa karkas utuh itik dan ayam. Kata betutu berasal dari kata tunu yang berarti bakar dan dirangkai dengan kata be yang berarti daging. Berdasarkan uraian tersebut betutu berarti daging yang dibakar.</item>
+        <item>Ayam Taliwang adalah makanan khas Pulau Lombok dari Kampung Karang Taliwang, Kota Mataram, Nusa Tenggara Barat yang berbahan dasar daging ayam. Daging ayam yang disajikan berasal dari ayam kampung muda yang dibakar kemudian dibumbui dengan semacam saus yang bahannya antara lain cabai merah kering, bawang merah, bawang putih, tomat, terasi goreng, kencur, gula merah, dan garam. Makanan ini biasanya disajikan bersama makanan khas Lombok yang lain, misalnya plecing kangkung.</item>
+        <item>Jika Aceh mendunia dengan mienya, berbeda lagi dengan Sumatera Utara yang populer dengan bika ambon. Yakni sejenis kue dengan rasa yang sangat lezat. Bika ambon bahkan juga dijual dengan beberapa varian rasa terbaik, seperti keju hingga durian.</item>
+        <item>Ibukota Indonesia juga tidak ketinggalan dengan kuliner khasnya yang bernama kerak telor, yakni menu masakan yang terbuat dari beras keran putih, ebi, telur ayam yang kemudian di sangrai. Akan semakin lezat dengan tambahan beberapa bumbu rahasia lainnya.</item>
+        <item>Lumpia merupakan kuliner khas Jateng yang terbuat dari rebung, daging udang dan telur yang dibungkus kemudian di goreng. Dijamin Anda akan ketagihan dengan rasanya.</item>
+        <item>Aceh merupakan salah satu provinsi di Indonesia yang terkenal dengan berbagai kuliner khas terbaik yang bahkan telah mendunia. Saat berkunjung ke Aceh, belum lengkap rasanya jika Anda tidak bisa mencicipi menu dengan bahan mie kuning tebal plus irisan daging yang disajikan dalam sup kari gurih dan pedas yang satu ini.</item>
+        <item>Nasi gudeg khas Yogyakarta terbuat dari olahan nangka muda plus santan. Kuliner dengan tambahan nasi, ayam kampung, telur dan lainnya ini akan membius lidah Anda dengan citarasanya yang teramat manis dan lezat.</item>
+        <item>Otak-otak merupakan kuliner khas Kepulauan Riau yang mudah ditemukan di Batam, Pulau Penyengat hingga Tanjung Pinang. Anda bisa mencicipi otak-otak cumi maupun ikan dengan citarasa yang sama-sama juara.</item>
+        <item>Pempek merupakan kuliner khas Sumatera Selatan yang terbuat dari olahan sagu dan ikan plus tambahan kuah coklat yang dinamai cukpo. Cita rasanya dijamin akan menggugah selera Anda.</item>
+        <item>Sumatera Barat memang telah berhasil mencuri mata dunia dengan bumbu khas masakan padangnya. Salah satunya tentu saja rendang yang terbuat dari berbagai jenis rempah dengan citarasa yang sangat kuat juga nikmat.</item>
+        <item>Banten juga menghadirkan kuliner terbaik khasnya yang bernama sate bandeng dengan daging empuk tak bertulang yang ditambah santan dan gula coklat. Pastikan Anda mencicipinya saat berkunjung ke Banten ya.</item>
+        <item>Serabi khas Jawa Barat terbuat dari tepung beras yang disiram kuah cair manis dengan citarasa nikmat yang dijamin menggugah selera semua lidah yang mencicipinya.</item>
+    </string-array>
+
+    <array name="data_photo">
+        <item>@drawable/ayam_betutu</item>,
+        <item>@drawable/ayam_taliwang</item>,
+        <item>@drawable/bika_ambon</item>,
+        <item>@drawable/kerak_telor</item>,
+        <item>@drawable/lumpia</item>,
+        <item>@drawable/mie_aceh</item>,
+        <item>@drawable/nasi_gudeg</item>,
+        <item>@drawable/otak_otak</item>,
+        <item>@drawable/pempek</item>,
+        <item>@drawable/rendang</item>,
+        <item>@drawable/sate_banden</item>,
+        <item>@drawable/serabi</item>
+    </array>
+
+    <array name="src_photo">
+        <item>R.drawable.ayam_betutu</item>,
+        <item>R.drawable.ayam_taliwang</item>,
+        <item>R.drawable.bika_ambon</item>,
+        <item>R.drawable.kerak_telor</item>,
+        <item>R.drawable.lumpia</item>,
+        <item>R.drawable.mie_aceh</item>,
+        <item>R.drawable.nasi_gudeg</item>,
+        <item>R.drawable.otak_otak</item>,
+        <item>R.drawable.pempek</item>,
+        <item>R.drawable.rendang</item>,
+        <item>R.drawable.sate_banden</item>,
+        <item>R.drawable.serabi</item>
+    </array>
+</resources>
