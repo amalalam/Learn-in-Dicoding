@@ -1,3 +1,3 @@
 # Learn-in-Dicoding
 
-Ini latihan Pertama
+Simple Navigation
