@@ -25,10 +25,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         private const val TAG = "MainActivity"
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tvResult.text = "Something"
 
         mainViewModel = MainViewModel(CuboidModel())
 
