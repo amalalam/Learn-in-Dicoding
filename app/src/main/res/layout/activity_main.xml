@@ -80,11 +80,14 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
+
         <ImageButton
             android:id="@+id/btn_repeating_time"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_access_time_24" />
+            android:src="@drawable/ic_baseline_access_time_24"
+            android:contentDescription="@string/alarm_time" />
+
         <TextView
             android:id="@+id/tv_repeating_time"
             android:layout_width="wrap_content"
@@ -99,7 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="@string/alarm_message"
-        android:inputType="text" />
+        android:inputType="text"
+        android:importantForAutofill="no" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -111,7 +115,7 @@
             android:id="@+id/btn_cancel_repeating_alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="0.5"
             android:text="@string/cancel_alarm" />
 
@@ -119,7 +123,7 @@
             android:id="@+id/btn_set_repeating_alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_weight="0.5"
             android:text="@string/set_repeating_alarm" />
 
