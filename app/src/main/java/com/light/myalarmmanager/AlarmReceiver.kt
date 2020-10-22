@@ -30,7 +30,22 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     fun setRepeatingAlarm(context: Context, type: String, time: String, message: String){
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val intent = Intent(context, AlarmReceiver::class.java)
+        intent.putExtra(EXTRA_MESSAGE, message)
+        val putExtra = intent.putExtra(EXTRA_TYPE, type)
 
+        val timeArray = time.split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+
+        val calendar = Calendar.getInstance()
+        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]))
+        calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]))
+        calendar.set(Calendar.SECOND, 0)
+
+        val pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0)
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, pendingIntent)
+
+        Toast.makeText(context, "Repeating alarm set up",Toast.LENGTH_SHORT).show()
     }
 
     private fun isDateInvalid( date: String, format: String): Boolean{
@@ -58,7 +73,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
 
     fun setOneTimeAlarm(context:Context, type: String, date:String, time:String, message:String){
-//        if (isDateInvalid(date,DATE_FORMAT) || isDateInvalid(time, TIME_12_24)) return
+        if (isDateInvalid(date, DATE_FORMAT) || isDateInvalid(time, TIME_FORMAT)) return
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
@@ -126,6 +141,9 @@ class AlarmReceiver : BroadcastReceiver() {
         // Siapkan 2 id untuk 2 macam alarm, onetime dan repeating
         private const val ID_ONETIME = 100
         private const val ID_REPEATING = 101
+
+        private const val DATE_FORMAT = "yyyy-MM-dd"
+        private const val TIME_FORMAT = "HH:mm"
     }
 
 
